@@ -36,7 +36,6 @@ const executive: Array<CompatibilityItem> = [
   },
 ];
 
-
 const committee: Array<CompatibilityItem> = [
   {
     title: "Head of f**kry",
@@ -79,19 +78,13 @@ const committee: Array<CompatibilityItem> = [
     name: "Ben",
   },
 ];
-
 ---
 
 <ContentSection title="The Committee" id="committee">
   <Fragment slot="lead">
-    We run <span class="text-primary">a lot</span> of events, so we need a great team to make it all happen!
+    We run <span class="text-primary">a lot</span> of events, so we need a great
+    team to make it all happen!
   </Fragment>
-  <CompatibilityList
-    items={executive}
-    title="executive committee"
-  />
-  <CompatibilityList
-    items={committee}
-    title="events team"
-  />
+  <CompatibilityList items={executive} title="executive committee" />
+  <CompatibilityList items={committee} title="events team" />
 </ContentSection>

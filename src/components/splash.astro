@@ -1,10 +1,8 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import { Icon } from "astro-icon";
 import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
-import GitHubCorner from "./github-corner.astro";
 import whiteLogo from "~/assets/whitelogo.png";
 
 const widths = [450, 800];
@@ -20,7 +18,14 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     <h2
       class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Picture src={whiteLogo} sizes={sizes} widths={widths} loading="eager" alt="QCS logo" class="h-24 text-white md:h-24" />
+      <Picture
+        src={whiteLogo}
+        sizes={sizes}
+        widths={widths}
+        loading="eager"
+        alt="QCS logo"
+        class="h-24 text-white md:h-24"
+      />
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
       >
@@ -33,7 +38,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
       class="w-2/3 max-w-3xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
     >
       <Picture
-        class="object-cover w-full h-full"
+        class="h-full w-full object-cover"
         src={astronautImage}
         widths={widths}
         sizes={sizes}

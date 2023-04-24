@@ -11,23 +11,23 @@ const { items, title } = Astro.props;
 ---
 
 <div class="w-full max-w-6xl space-y-2">
-  <div class="relative border border-default bg-offset px-6 pt-8 pb-4">
+  <div class="relative border border-default bg-offset px-6 pb-4 pt-8">
     <h3
-      class="absolute top-0 right-4 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
+      class="absolute right-4 top-0 -translate-y-1/2 rounded-full border border-current bg-default px-4 py-1 uppercase tracking-tight text-xs"
     >
       {title}
     </h3>
     <ul class="grid grid-cols-2 gap-8 sm:grid-cols-3 md:grid-cols-5">
       {
         items.map((item) => (
-          <li
-             class="flex flex-col items-center gap-2" >
-              <Icon class="h-12" name={item.icon} />
-              <p class="text-primary h-6 font-bold">{item.name}</p>
-            
-                <p class="text-sm text-center"> {!!item.title?item.title:"Events Team"}</p>
-              
-            
+          <li class="flex flex-col items-center gap-2">
+            <Icon class="h-12" name={item.icon} />
+            <p class="h-6 font-bold text-primary">{item.name}</p>
+
+            <p class="text-center text-sm">
+              {" "}
+              {!!item.title ? item.title : "Events Team"}
+            </p>
           </li>
         ))
       }
