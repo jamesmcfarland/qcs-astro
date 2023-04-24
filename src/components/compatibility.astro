@@ -3,87 +3,95 @@ import CompatibilityList from "~/components/compatibility-list.astro";
 import ContentSection from "~/components/content-section.astro";
 import type { CompatibilityItem } from "~/types";
 
-const frameworks: Array<CompatibilityItem> = [
+const executive: Array<CompatibilityItem> = [
   {
-    title: "React",
-    icon: "frameworks/react",
-    url: "https://reactjs.org/",
+    title: "President",
+    icon: "mdi:user-circle-outline",
+    name: "Nicole Hanna",
   },
   {
-    title: "Preact",
+    title: "Vice-President",
     icon: "frameworks/preact",
-    url: "https://preactjs.com/",
+    name: "Matthew Close",
   },
   {
-    title: "Svelte",
+    title: "Secretary",
     icon: "frameworks/svelte",
-    url: "https://svelte.dev/",
+    name: "Joe Murray",
   },
   {
-    title: "Vue",
+    title: "Treasurer",
     icon: "frameworks/vue",
-    url: "https://vuejs.org/",
+    name: "Janiru Foneska",
   },
   {
-    title: "Solid",
+    title: "Head of Events",
     icon: "frameworks/solid",
-    url: "https://www.solidjs.com/",
+    name: "Tim Chan",
   },
   {
-    title: "Lit",
+    title: "Social Media Officer",
     icon: "frameworks/lit",
-    url: "https://lit.dev/",
+    name: "Gaby Whitelegg",
   },
 ];
 
-const platforms: Array<CompatibilityItem> = [
+
+const committee: Array<CompatibilityItem> = [
   {
-    title: "Netlify",
-    icon: "platforms/netlify",
-    url: "https://www.netlify.com/",
+    title: "Head of f**kry",
+    icon: "mdi:user-circle-outline",
+    name: "James McFarland",
   },
   {
-    title: "Vercel",
-    icon: "platforms/vercel",
-    url: "https://vercel.com/",
+    title: "Graphics Design",
+    icon: "frameworks/preact",
+    name: "Paul Larkin",
   },
   {
-    title: "Cloudflare",
-    icon: "fa-brands:cloudflare",
-    url: "https://pages.cloudflare.com/",
+    title: "Company Liason",
+    icon: "frameworks/svelte",
+    name: "Olivia Mallon",
   },
   {
-    title: "Render",
-    icon: "platforms/render",
-    url: "https://render.com/",
+    title: "Hot man",
+    icon: "frameworks/vue",
+    name: "Charles Baylon",
   },
   {
-    title: "GitHub",
-    icon: "fa-brands:github",
-    url: "https://pages.github.com/",
+    name: "Joseph Mullan",
+    icon: "frameworks/solid",
+    title: "TAF Man",
   },
   {
-    title: "GitLab",
-    icon: "fa-brands:gitlab",
-    url: "https://docs.gitlab.com/ee/user/project/pages/",
+    title: "Head of Revision",
+    icon: "frameworks/lit",
+    name: "Lauren Coyle",
+  },
+  {
+    title: "Game Man",
+    icon: "logomark",
+    name: "Ryan Rogan",
+  },
+  {
+    title: "Joe's mate",
+    icon: "mdi:electron-framework",
+    name: "Ben",
   },
 ];
+
 ---
 
-<ContentSection title="Compatibility" id="compatibility">
+<ContentSection title="The Committee" id="committee">
   <Fragment slot="lead">
-    Astro <span class="text-primary">plays nice</span>. Bring your own UI{" "}
-    <span class="text-primary">framework</span>
-    and deploy to your favorite <span class="text-primary">platform</span>.
+    We run <span class="text-primary">a lot</span> of events, so we need a great team to make it all happen!
   </Fragment>
   <CompatibilityList
-    items={frameworks}
-    title="Frameworks"
-    url="https://docs.astro.build/core-concepts/framework-components/"
+    items={executive}
+    title="executive committee"
   />
   <CompatibilityList
-    items={platforms}
-    title="Platforms"
-    url="https://docs.astro.build/guides/deploy/"
+    items={committee}
+    title="events team"
   />
 </ContentSection>

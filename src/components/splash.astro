@@ -5,6 +5,7 @@ import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import GitHubCorner from "./github-corner.astro";
+import whiteLogo from "~/assets/whitelogo.png";
 
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
@@ -12,7 +13,6 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
 
 <section class="relative h-full bg-black">
   <Starfield />
-  <GitHubCorner />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
   </div>
@@ -20,13 +20,12 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     <h2
       class="flex flex-col gap-2 self-end sm:gap-4 sm:self-auto sm:justify-self-end"
     >
-      <Icon name="logomark" class="h-24 text-white md:h-32" />
+      <Picture src={whiteLogo} sizes={sizes} widths={widths} loading="eager" alt="QCS logo" class="h-24 text-white md:h-24" />
       <div
         class="gradient-text text-center font-extrabold tracking-tighter text-8xl"
       >
-        Build fast
-        <br /> websites,
-        <br /> faster.
+        For students
+        <br /> by students.
       </div>
     </h2>
     <div

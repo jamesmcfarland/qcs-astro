@@ -1,7 +1,7 @@
 export interface CompatibilityItem {
   icon: string;
   title: string;
-  url: string;
+  name: string;
 }
 
 export interface FeatureItem {
