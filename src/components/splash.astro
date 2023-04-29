@@ -44,7 +44,7 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
     </h2>
     <div
       id="threejs-container"
-      class="h-full w-2/3 max-w-xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start"
+      class="h-full w-2/3 max-w-xl self-start sm:w-10/12 sm:self-auto sm:justify-self-start invisible md:visible"
     >
       <script
         async
@@ -64,6 +64,11 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
         import * as THREE from "three";
         import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
         import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+
+        //do not run script if window width is less than 640px
+        if (window.innerWidth < 640) {
+          return;
+        }
 
         const container = document.getElementById("threejs-container");
 
