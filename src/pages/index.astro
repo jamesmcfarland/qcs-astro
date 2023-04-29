@@ -1,16 +1,15 @@
 ---
 import "@fontsource/inter/variable.css";
-import Compatibility from "~/components/compatibility.astro";
-import Features from "~/components/features.astro";
+import Committee from "~/components/committee.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
-import Showcase from "~/components/showcase.astro";
+import Events from "~/components/events.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
 
 const { generator, site } = Astro;
-const image = new URL("social.jpg", site);
+const image = new URL("social.png", site);
 const description =
   "The society for computing at Queen's University Belfast. By Students, For Students";
 ---
@@ -20,7 +19,7 @@ const description =
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.png" type="image/png" />
     <meta name="generator" content={generator} />
 
     <title>Queen's Computing Society</title>
@@ -36,26 +35,7 @@ const description =
 
     <!-- initialize theme -->
     <script is:inline>
-      const themeSaved = localStorage.getItem("theme");
-
-      if (themeSaved) {
-        document.documentElement.dataset.theme = themeSaved;
-      } else {
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
-      }
-
-      window
-        .matchMedia("(prefers-color-scheme: dark)")
-        .addEventListener("change", (event) => {
-          if (!localStorage.getItem("theme")) {
-            document.documentElement.dataset.theme = event.matches
-              ? "dark"
-              : "light";
-          }
-        });
+      document.documentElement.dataset.theme = "dark";
     </script>
   </head>
   <body
@@ -65,9 +45,8 @@ const description =
     <Splash />
     <div class="space-y-24 px-8 py-32">
       <Intro />
-      <Features />
-      <Compatibility />
-      <Showcase />
+      <Events />
+      <Committee />
     </div>
     <Footer />
   </body>

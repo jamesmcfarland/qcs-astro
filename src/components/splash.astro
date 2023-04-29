@@ -1,10 +1,9 @@
 ---
 import { Picture } from "@astrojs/image/components";
-import astronautImage from "~/assets/astronaut.png";
 import HeroImage from "~/components/hero-image.astro";
 import Starfield from "~/components/starfield.astro";
 import whiteLogo from "~/assets/whitelogo.png";
-
+import qubLogoLand from "~/assets/qub_logo_land.png"
 const widths = [450, 800];
 const sizes = "(min-width: 640px) 42vw, 67vw";
 ---
@@ -13,6 +12,17 @@ const sizes = "(min-width: 640px) 42vw, 67vw";
   <Starfield />
   <div id="splash-bg-fallback" class="absolute inset-0 hidden opacity-40">
     <HeroImage />
+  </div>
+  <div class="absolute top-0 right-0 m-8">
+    <span class="text-xs font">A society of</span>
+    <Picture
+        src={qubLogoLand}
+        sizes={sizes}
+        widths={widths}
+        loading="eager"
+        alt="QUB logo"
+        class="h-8 inline ml-2"
+      />
   </div>
   <div class="relative grid h-full place-items-center sm:grid-cols-2">
     <h2

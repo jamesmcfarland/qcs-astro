@@ -1,13 +1,13 @@
 ---
 import { Icon } from "astro-icon";
-import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 import whiteIcon from "~/assets/whiteIcon.png";
 import logoText from "~/assets/logoText.png";
 import { Picture } from "@astrojs/image/components";
+import qubLogoCrest from "~/assets/qub_logo_crest.png";
 
 const navItems: Array<NavItem> = [
-  { title: "Whoami", url: "#features" },
+  { title: "Who are we", url: "#features" },
   { title: "Committee", url: "#committee" },
   { title: "Events", url: "#showcase" },
 ];
@@ -20,20 +20,30 @@ const navItems: Array<NavItem> = [
   <a class="flex items-center gap-3 hover:!text-default" href="#">
     <h1 class="sr-only">Queen's Computing Society</h1>
     <Picture
+      alt="QUB logo crest"
+      src={qubLogoCrest}
+      sizes={"(min-width: 640px) 42vw, 67vw"}
+      widths={[160, 320]}
+      class="h-7"
+    />
+    <Picture
       alt="QCS logo"
       src={whiteIcon}
       sizes={"(min-width: 640px) 42vw, 67vw"}
       widths={[160, 320]}
       class="h-7"
     />
-    <Picture
+    <!-- <Picture
       alt="QCS logo text"
       src={logoText}
       sizes={"(min-width: 640px) 42vw, 67vw"}
       widths={[160, 320]}
       class="h-5"
-    />
-    <span id="scrollProgress"></span>
+    /> -->
+
+    <h2 class="lowercase">
+      Queens<span class="font-bold">Computing</span>Society
+    </h2>
   </a>
   <div>
     <div class="flex items-center gap-6">
@@ -58,7 +68,6 @@ const navItems: Array<NavItem> = [
       >
         <Icon pack="mdi" name="menu" class="h-8" />
       </button>
-      <ThemeSwitcher />
     </div>
     <div id="menu-modal" class="modal hidden" aria-hidden="true">
       <div class="fixed inset-0 bg-default px-8 py-4 text-default">

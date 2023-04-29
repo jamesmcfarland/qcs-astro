@@ -1,9 +1,9 @@
 ---
-import CompatibilityList from "~/components/compatibility-list.astro";
+import CommitteeList from "~/components/committee-list.astro";
 import ContentSection from "~/components/content-section.astro";
-import type { CompatibilityItem } from "~/types";
+import type { CommitteeItem } from "~/types";
 
-const executive: Array<CompatibilityItem> = [
+const executive: Array<CommitteeItem> = [
   {
     title: "President",
     icon: "mdi:user-circle-outline",
@@ -36,7 +36,7 @@ const executive: Array<CompatibilityItem> = [
   },
 ];
 
-const committee: Array<CompatibilityItem> = [
+const committee: Array<CommitteeItem> = [
   {
     title: "Head of f**kry",
     icon: "mdi:user-circle-outline",
@@ -85,6 +85,6 @@ const committee: Array<CompatibilityItem> = [
     We run <span class="text-primary">a lot</span> of events, so we need a great
     team to make it all happen!
   </Fragment>
-  <CompatibilityList items={executive} title="executive committee" />
-  <CompatibilityList items={committee} title="events team" />
+  <CommitteeList items={executive} title="executive committee" />
+  <CommitteeList items={committee} title="events team" />
 </ContentSection>

@@ -1,30 +1,39 @@
 ---
+import { Picture } from "@astrojs/image/components";
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+import whiteIcon from "~/assets/whiteIcon.png";
 ---
 
-<ContentSection title="Just ship less" id="intro">
-  <Icon slot="eyebrow" name="logomark" class="h-32" />
+<ContentSection title="Welcome to QCS" id="intro">
+  <Picture
+    alt="QCS logo"
+    src={whiteIcon}
+    sizes={"(min-width: 640px) 42vw, 67vw"}
+    widths={[160, 320]}
+    class="h-32"
+    slot="eyebrow"
+  />
   <Fragment slot="lead">
-    Astro is a new kind of site builder for the
-    <span class="text-primary">modern</span> web.
-    <span class="text-primary">Lightning-fast</span>
-    performance meets <span class="text-primary">powerful</span> developer experience.
+    We're one of the oldest and biggest societies within Queen's! With over
+    <span class="text-primary">400</span> members, we run game nights, pub nights,
+    workshops
+    <span class="text-primary">and more!</span>
   </Fragment>
   <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
     <a
-      href="https://docs.astro.build/"
+      href="#committee"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
+      <span>Meet the team</span>
     </a>
     <a
-      href="https://astro.new/"
+      href="https://fixr.co/organiser/qcs"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
+      <span>Become a member</span>
     </a>
   </div>
 </ContentSection>

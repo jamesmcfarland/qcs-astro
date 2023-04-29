@@ -1,12 +1,11 @@
-export interface CompatibilityItem {
+export interface CommitteeItem {
   icon: string;
   title: string;
   name: string;
 }
 
-export interface FeatureItem {
-  description: string;
-  icon: string;
+export interface EventItem {
+  image: any;
   title: string;
 }
 
@@ -18,11 +17,5 @@ export interface FooterLink {
 
 export interface NavItem {
   title: string;
-  url: string;
-}
-
-export interface ShowcaseSite {
-  title: string;
-  image: ImageMetadata;
   url: string;
 }
