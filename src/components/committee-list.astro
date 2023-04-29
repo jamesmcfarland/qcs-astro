@@ -17,10 +17,10 @@ const { items, title } = Astro.props;
     >
       {title}
     </h3>
-    <ul class="flex flex-wrap justify-center md:gap-2 align-middle">
+    <ul class="flex flex-wrap justify-center align-middle md:gap-2">
       {
         items.map((item) => (
-          <li class="my-4 flex md:w-1/5 w-1/2 flex-col items-center">
+          <li class="my-4 flex w-1/2 flex-col items-center md:w-1/5">
             <Icon class="h-12" name={item.icon} />
             <h2 class=" text-center font-bold text-primary">{item.name}</h2>
 
